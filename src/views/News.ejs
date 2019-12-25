@@ -5,29 +5,25 @@
     <meta charset="utf-8">
     <title>NewsSite</title>
     <meta name="author" content="ORKEMEY">
-
+    <base href="/">
+    <link rel="stylesheet"  type="text/css" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
 
   </head>
 
   <body>
-      
     <div class="container-auto">
-        <br>
+
         <nav class="navbar navbar-dark bg-primary">
           <a href="/" class="navbar-brand">News! </a>
         </nav>
-        
         <br>
             <div  class="news">
-            <h4><%- news.header %></h4>
-            <p><%- news.content %></p>
-             </div>
+            <h4><%= header %></h4>
+            <hr>
+            <p><%= content %></p>
+        </div>
    
-        
-
     </div>
-
   </body>
   </html>
