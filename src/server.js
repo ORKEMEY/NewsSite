@@ -12,7 +12,8 @@ const { ObjectID } = require('mongodb');
 
 const url = 'mongodb+srv://Someone:kpi123@news-e7tux.mongodb.net/news?retryWrites=true&w=majority';
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
   console.log('Server is up!');
 });
 
@@ -74,12 +75,11 @@ app.use('/News/:id', (request, response) => {
     console.log(`idSite: ${String(request.params.id)}`);
     const a = String(id);
     newsdb.findOne({ header: String(request.params.id) }, (err, result) => {
-      if (err) {
-        return console.log(err);
-      }
+      if (err) { return console.log(err);}
 
       console.log(`idSite: ${String(id)} ${typeof id}`);
       console.log(`idSite: ${result}`);
+
       if (result === null) {
         response.render(`${__dirname}/views/News.ejs`, {
           header: 'a' /* result.header */,
