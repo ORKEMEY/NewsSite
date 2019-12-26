@@ -31,14 +31,11 @@
 
       </div>
 
-   
-
-
-    <% results.forEach(element => { %>
+    <% news.forEach(element => { %>
         <hr>
     <div  class="news">
-        <a href="/News/ <%= element.header%>"> <h4><%= element.header %></h4></a>
-        <p><%= element.content.toString().substr(0, 50) %></p>
+        <a href="/News/ <%= element._id%>"> <h4><%= element.header %></h4></a>
+        <p class="content"><%= element.content %></p>
        
     </div>
     <% }); %>

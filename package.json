@@ -7,7 +7,12 @@
     "prettier": "prettier --write src/*",
     "test": "eslint --ignore-path .gitignore --debug src/**/*.js --fix",
     "lint": "eslint --ignore-path .gitignore --debug src/**/*.js",
-    "start" : "node src/server.js"
+    "start": "node src/server.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write src/**/*"
+    }
   },
   "keywords": [],
   "author": "ORKEMEY",
@@ -17,12 +22,15 @@
     "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    
     "mongodb": "^3.4.1",
+    "mongoose": "^5.8.3",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
+    "hasky": "^3.0.2",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",

@@ -1,0 +1,4 @@
+{
+    "URL": "mongodb+srv://Someone:kpi123@news-e7tux.mongodb.net/news?retryWrites=true&w=majority",
+    "PORT" : "3000"
+}
