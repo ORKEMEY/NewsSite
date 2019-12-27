@@ -1,0 +1,10 @@
+{  
+    "newsScheme" : {
+        "header" : {
+            "type": "String"
+        },
+        "content" : {
+            "type": "String"
+        }
+    }
+}

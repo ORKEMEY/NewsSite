@@ -51,19 +51,15 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-
 .news {
   padding-left: 10pt;
   padding-right: 10pt;
 }
-
 .content {
     white-space: nowrap;
     overflow: hidden;
     padding: 5px;
 }
-  
-
 .word-division{
     word-wrap:break-word;
 }
