@@ -7,13 +7,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const mongoose = require('mongoose');
 
 const CONFIG = require(`${__dirname}/../config.json`);
-const SCHEME = require(`${__dirname}/../models.json`);
-const { URL } = CONFIG;
+const SCHEME = require(`${__dirname}/models.json`);
+const URL = process.env.CONFIG_URL;
 const PORT = process.env.PORT || CONFIG.PORT;
 
-const { Schema } = mongoose;
-
-const newsScheme = SCHEME.newsScheme;
+const { newsScheme } = SCHEME;
 
 mongoose.connect(URL, { useUnifiedTopology: true });
 const News = mongoose.model('News', newsScheme);
